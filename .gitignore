@@ -1,0 +1,16 @@
+*.user
+*.pro.user
+*.pro.user.*
+*.7z
+*.docx
+*.doc
+*.orig
+*/vcpkg/*
+*Makefile*
+*.Debug
+*.Release
+*.txt
+*.ini
+*.bin
+
+/node_modules/*
