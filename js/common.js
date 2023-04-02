@@ -1,76 +1,76 @@
 $(document).ready(function() {
  	$("#photogallery").owlCarousel({
  		loop: true,
- 		margin: 10,
- 		//stagepading: 20,
- /*	
-	items:3,	
-        itemsCustom : true,
-        itemsDesktop : [1199, 3],
-        itemsDesktopSmall : [979, 2],
-        itemsTablet : [768, 2],
-        itemsTabletSmall : false,
-        itemsMobile : [479, 1],
-        singleitem : false,
-        itemsscaleup : true,
-*/
+  		
+//  		//stagepading: 20,
 
 
-        items: 3,
+
+        items: 1,
         responsive: {
-                479: {items : 1},
-                 768: {items : 2},
-                  1024: {items : 2},
-                   1199: {items : 3}
+                479: {
+                    items : 1
+                },
+                 768: {
+                    items : 2
+                },
+                  1024: {
+                    items : 2
+                },
+                   1199: {
+                    items : 3
+                }
         },
 
-        slideSpeed : 200,
-        paginationSpeed : 800,
-        rewindSpeed : 1000,
+           slideSpeed : 200,
+//         paginationSpeed : 800,
+//         rewindSpeed : 1000,
 
-        autoplay : true,
-        stopOnHover : true,
+         autoplay : true,
+         stopOnHover : true,
 
-        navigation : false,
-        navigationText : ["prev", "next"],
-        rewindNav : true,
-        scrollPerPage : false,
+//         navigation : false,
+//         navigationText : ["prev", "next"],
+//         rewindNav : true,
+//         scrollPerPage : false,
 
-        pagination : true,
-        paginationNumbers : false,
+            pagination : true,
+        paginationNumbers : true,
 
-        responsive : true,
-        responsiveRefreshRate : 200,
-        responsiveBaseWidth : window,
+//         responsive : true,
+//         responsiveRefreshRate : 200,
+         responsiveBaseWidth : window,
 
-        baseclass : "owl-carousel",
-        theme : "owl-theme",
+         baseclass : "owl-carousel",
+         theme : "owl-theme",
 
         lazyLoad : false,
         lazyFollow : true,
         lazyeffect : "fade",
 
-        autoheight : true,
+//         autoheight : true,
 
-        jsonPath : false,
-        jsonSuccess : false,
+//         jsonPath : false,
+//         jsonSuccess : false,
 
-        dragBeforeAnimFinish : true,
-        mouseDrag : true,
-        touchDrag : true,
+//         dragBeforeAnimFinish : true,
+//         mouseDrag : true,
+//         touchDrag : true,
 
-        addClassActive : true,
-        transitionStyle : "fadeOut",
+         addClassActive : true,
+         animateIn: 'fadeIn',
+         animateOut: 'fadeOut',
+        // transitionStyle : "fadeOut",
 
-        beforeUpdate : false,
-        afterUpdate : false,
-        beforeInit : false,
-        afterInit : false,
-        beforeMove : false,
-        afterMove : false,
-        afterAction : false,
-        startDragging : false,
-        afterLazyLoad: false
+//         beforeUpdate : false,
+//         afterUpdate : false,
+//         beforeInit : false,
+//         afterInit : false,
+//         beforeMove : false,
+//         afterMove : false,
+//         afterAction : false,
+//         startDragging : false,
+//         afterLazyLoad: false
 
 
 
@@ -85,7 +85,8 @@ $(document).ready(function() {
  		
 		
         itemsCustom : true,
-        itemsDesktop : [1199, 4],
+        itemsDesktop : false,
+       // itemsDesktop : [1199, 4],
         itemsDesktopSmall : [979, 3],
         itemsTablet : [768, 2],
         itemsTabletSmall : false,
@@ -183,15 +184,18 @@ $(document).ready(function() {
 		$(".top_mnu").fadeOut(600);
 		$(".sandwich").toggleClass("active");
 		$(".top_text").css("opacity", "1");
+        $(".icons").css("opacity", "1");
 	}).append("<span>");
 
 	$(".toggle_mnu").click(function() {
 		if ($(".top_mnu").is(":visible")) {
 			$(".top_text").css("opacity", "1");
+            $(".icons").css("opacity", "1");
 			$(".top_mnu").fadeOut(600);
 			$(".top_mnu li a").removeClass("fadeInUp animated");
 		} else {
 			$(".top_text").css("opacity", ".1");
+            $(".icons").css("opacity", ".1");
 			$(".top_mnu").fadeIn(600);
 			$(".top_mnu li a").addClass("fadeInUp animated");
 		};
@@ -213,9 +217,14 @@ $(window).load(function() {
 	$(".loader").delay(400).fadeOut("slow");
 
 	$(".top_text h1").animated("fadeInDown", "fadeOutUp");
+    $(".icons").animated("fadeInDown", "fadeOutUp");
 	$(".top_text p").animated("fadeInUp", "fadeOutDown");
 
 }); 
+
+
+
+
 /*$(document).ready(function(){
 	$("photogallery").owlcarousel();
 }); */

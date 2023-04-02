@@ -21,7 +21,10 @@ body .main_footer,
 
 .bg_light {
   /*background-image: url(img/backgroudTexture2.jpg);*/
-  background-color: #bdbdbd; }
+ /* background-color: #bdbdbd;*/ }
+ .bg_grey {
+  background-color: #bdbdbd;
+ }
 
 .bg_dark {
   background-color: #222;
@@ -32,7 +35,7 @@ body .main_footer,
     color: #fff; }
 
 .top_mnu a:hover {
-  color: #8238A7; }
+  color: #89f5ff; }
 .top_mnu a {
   letter-spacing: 4px; }
 
